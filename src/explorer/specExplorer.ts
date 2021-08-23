@@ -71,15 +71,17 @@ export class SpecNodeProvider extends Disposable implements vscode.TreeDataProvi
                     (node: GaugeNode) => workspace.openTextDocument(node.file)
                         .then(this.showDocumentWithSelection(node))),
 
-                commands.registerCommand(GaugeVSCodeCommands.ExecuteNode, (node: GaugeNode) =>
-                    this.gaugeWorkspace.getGaugeExecutor().execute(
+                commands.registerCommand(GaugeVSCodeCommands.ExecuteNode,
+                    (node: GaugeNode, executor = this.gaugeWorkspace.getGaugeExecutor()) =>
+                        executor.execute(
                         node instanceof Scenario ? node.executionIdentifier : node.file,
                         new ExecutionConfig().setStatus(node.file)
                             .setProject(this.gaugeWorkspace.getClientsMap().get(node.file).project))
                 ),
 
-                commands.registerCommand(GaugeVSCodeCommands.DebugNode, (node: GaugeNode) =>
-                    this.gaugeWorkspace.getGaugeExecutor().execute(
+                commands.registerCommand(GaugeVSCodeCommands.DebugNode,
+                    (node: GaugeNode, executor = this.gaugeWorkspace.getGaugeExecutor()) =>
+                        executor.execute(
                         node instanceof Scenario ? node.executionIdentifier : node.file,
                         new ExecutionConfig().setStatus(node.file).setDebug()
                             .setProject(this.gaugeWorkspace.getClientsMap().get(node.file).project))
