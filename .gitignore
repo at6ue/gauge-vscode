@@ -8,4 +8,5 @@ logs
 .idea
 welcome.html
 .DS_Store
-test/testdata/**/.vscode/
+test/testdata/**/.vscode/*
+!test/testdata/.vscode/launch.json
