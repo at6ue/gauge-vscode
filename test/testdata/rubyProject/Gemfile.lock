@@ -1,0 +1,78 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    abstract_type (0.0.7)
+    adamantium (0.2.0)
+      ice_nine (~> 0.11.0)
+      memoizable (~> 0.4.0)
+    anima (0.3.2)
+      abstract_type (~> 0.0.7)
+      adamantium (~> 0.2)
+      equalizer (~> 0.0.11)
+    ast (2.4.2)
+    concord (0.1.6)
+      adamantium (~> 0.2.0)
+      equalizer (~> 0.0.9)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.12)
+    diff-lcs (1.4.4)
+    equalizer (0.0.11)
+    gauge-ruby (0.5.4)
+      debase (~> 0.2.2)
+      grpc (~> 1.10, >= 1.10.0)
+      method_source (>= 0.8.2, < 1.1.0)
+      os (= 1.1.1)
+      parser (~> 2.3)
+      ruby-debug-ide (>= 0.6, < 0.8)
+      ruby-protocol-buffers (= 1.6.1)
+      unparser (>= 0.2.6, < 0.5.0)
+    google-protobuf (3.18.0-universal-darwin)
+    googleapis-common-protos-types (1.2.0)
+      google-protobuf (~> 3.14)
+    grpc (1.41.0-universal-darwin)
+      google-protobuf (~> 3.17)
+      googleapis-common-protos-types (~> 1.0)
+    ice_nine (0.11.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    method_source (1.0.0)
+    mprelude (0.1.0)
+      abstract_type (~> 0.0.7)
+      adamantium (~> 0.2.0)
+      concord (~> 0.1.5)
+      equalizer (~> 0.0.9)
+      ice_nine (~> 0.11.1)
+      procto (~> 0.0.2)
+    os (1.1.1)
+    parser (2.7.2.0)
+      ast (~> 2.4.1)
+    power_assert (2.0.1)
+    procto (0.0.3)
+    rake (13.0.6)
+    ruby-debug-ide (0.7.3)
+      rake (>= 0.8.1)
+    ruby-protocol-buffers (1.6.1)
+    test-unit (3.4.7)
+      power_assert
+    thread_safe (0.3.6)
+    unparser (0.4.9)
+      abstract_type (~> 0.0.7)
+      adamantium (~> 0.2.0)
+      anima (~> 0.3.1)
+      concord (~> 0.1.5)
+      diff-lcs (~> 1.3)
+      equalizer (~> 0.0.9)
+      mprelude (~> 0.1.0)
+      parser (>= 2.6.5)
+      procto (~> 0.0.2)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  gauge-ruby
+  test-unit
+
+BUNDLED WITH
+   2.2.28

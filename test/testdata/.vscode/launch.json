@@ -8,8 +8,13 @@
             "name": "Gauge Run Option",
             "type": "gauge",
             "request": "test",
-            "env": ["a", "c"],
-            "tags": "single word | env"
+            "env": [
+                "a",
+                "c"
+            ],
+            "tags": "single word | env",
+            "sort": true,
+            "n": 3
         }
     ]
 }
